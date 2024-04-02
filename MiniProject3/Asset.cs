@@ -8,17 +8,15 @@ namespace MiniProject3
 {
     internal class Asset
     {
-        public string? Office {  get; set; }
-        public string? Date { get; set; }
+        public Office Office { get; set; }
+        public DateTime Date { get; set; }
         public int Price { get; set; }
-        public string? Currency { get; set; }
 
-        public Asset(string? office, string? date, int price, string? currency)
+        public Asset(Office office, DateTime date, int price)
         {
             Office = office;
             Date = date;
             Price = price;
-            Currency = currency;
         }
 
     }

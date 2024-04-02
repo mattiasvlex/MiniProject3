@@ -12,7 +12,7 @@ namespace MiniProject3
         public string? Brand { get; set; }
         public string? Model { get; set; }
 
-        public Phone(string? brand, string? model, string? office, string? date, int price, string? currency) : base(office, date, price, currency)
+        public Phone(Office office, DateTime date, int price, string? brand, string? model) : base(office, date, price)
         {
             Brand = brand;
             Model = model;
