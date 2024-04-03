@@ -11,7 +11,7 @@ namespace MiniProject3
         public string? Brand {  get; set; }
         public string? Model { get; set; }
 
-        public Computer(Office office, DateTime date, int price, string? brand, string? model) : base(office, date, price)
+        public Computer(Office office, DateOnly date, int price, string? brand, string? model) : base(office, date, price)
         {
             Brand = brand;
             Model = model;

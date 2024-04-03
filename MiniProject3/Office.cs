@@ -10,9 +10,9 @@ namespace MiniProject3
     {
         public string Country { get; set; }
         public string Currency {  get; set; }
-        public double ToUSD { get; set; }
+        public decimal ToUSD { get; set; }
 
-        public Office(string country, string currency, double toUSD)
+        public Office(string country, string currency, decimal toUSD)
         {
             Country = country;
             Currency = currency;
