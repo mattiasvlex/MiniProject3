@@ -9,14 +9,14 @@ namespace MiniProject3
     internal class Office
     {
         public string Country { get; set; }
-        public string Currency {  get; set; }
-        public decimal ToUSD { get; set; }
+        public string Currency { get; set; }
+        public decimal ToLocal { get; set; }
 
-        public Office(string country, string currency, decimal toUSD)
+        public Office(string country, string currency, decimal toLocal)
         {
             Country = country;
             Currency = currency;
-            ToUSD = toUSD;
+            ToLocal = toLocal;
         }
     }
 }
