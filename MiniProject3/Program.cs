@@ -19,7 +19,7 @@ List<Asset> assets = new List<Asset> {
     new Phone("Sony Xperia", "10 III", new DateOnly(2021, 03, 06), 800, offices[0]),
     new Phone("Iphone", "10", new DateOnly(2018, 11, 25), 750, offices[1]),
     new Computer("HP", "Elitebook", new DateOnly(2023, 08, 30), 1530, offices[2]),
-    new Computer("HP", "Elitebook", new DateOnly(2021, 07, 01), 1640, offices[0])
+    new Computer("HP", "Elitebook", new DateOnly(2021, 07, 06), 1640, offices[0])
 };
 
 
@@ -38,7 +38,7 @@ bool EvaluateInput(string input)
     switch (input)
     {
         case "1":  //Print
-            Menu.PrintAll(assets.OrderBy(a => a.GetType().Name).ThenBy(d => d.Office.Country).ToList(), 
+            Menu.PrintAll(assets.OrderBy(o => o.Office.Country).ThenBy(d => d.Date).ToList(), 
                 assets.Where(d => (todayInMonths - (d.Date.Year * 12 + d.Date.Month) == 33 && today.Day > d.Date.Day)
 				|| todayInMonths - (d.Date.Year * 12 + d.Date.Month) >= 34).ToList());  //2*12 + 9 == 33 months
             return true;
